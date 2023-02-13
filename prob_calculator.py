@@ -1,6 +1,3 @@
-# todo: sombrero: un objeto sombrero que contiene bolas que debe copiarse dentro de la función.
-# No inicialice la semilla aleatoria dentro de prob_calculator.py.
-
 from random import randint
 import copy
 
@@ -10,12 +7,12 @@ balls_in = {}
 
 class Hat:
 
-    def __init__(self, **kwargs):  # todo: ok
+    def __init__(self, **kwargs):
         global balls_in
         balls_in = copy.copy(kwargs)
         self.contents = [ k for k, v in kwargs.items() for i in range(v)]
 
-    def draw(self, num):  # todo: ok
+    def draw(self, num):
         out = []
         if num > len(self.contents):
             return self.contents
